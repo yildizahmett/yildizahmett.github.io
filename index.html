@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Programlama Kursu</title>
+    <style>
+        body {
+            background-color: #c6a6d1; /* Açık mor arka plan rengi */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6923a1; /* Koyu mor başlık arka plan rengi */
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 10px;
+        }
+
+
+        section {
+            text-align: left;
+            margin: 20px;
+        }
+
+        #dersler ul {
+            display: flex; /* Flexbox kullanımı */
+            justify-content: center; /* Öğeleri yatayda ortala */
+            list-style: none;
+        }
+
+        #dersler li {
+            text-align: center;
+            margin: 10px;
+            display: flex;
+            flex-direction: column; /* Öğeleri dikeyde hizala */
+        }
+
+        footer {
+            background-color: #6923a1; /* Koyu mor footer arka plan rengi */
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* Form stilleri */
+        #iletisim-form {
+            text-align: center;
+            width: full;
+        }
+
+        #iletisim-form form {
+            display: inline-block;
+            text-align: left;
+            padding: 30px; /* Azaltıldı */
+            background-color: #f7f7f7; /* Renk değiştirildi */
+            border: 1px solid #ccc; /* Kenarlık eklendi */
+            border-radius: 10px;
+            width: 300px; /* Form genişliği ayarlandı */
+            margin: 0 auto; /* Orta hizalandı */
+        }
+
+        #iletisim-form label {
+            display: block;
+            margin: 10px;
+        }
+
+        #iletisim-form input,
+        #iletisim-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #iletisim-form input[type="submit"] {
+            background-color: #6923a1;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Programlama Kursu</h1>
+        <p>Web programlamayı öğrenmek için mükemmel bir başlangıç!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#dersler">Dersler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section id="hakkimizda">
+        <h2>Hakkımızda</h2>
+        <p>Web programlama kursu, web geliştirme alanına giriş yapmak isteyen herkes için tasarlanmıştır. Temel HTML, CSS ve JavaScript becerilerini öğrenerek web siteleri oluşturmayı ve özelleştirmeyi öğreneceksiniz.</p>
+    </section>
+
+    <section id="dersler">
+        <h2>Dersler</h2>
+        <ul>
+            <li>
+            <span>HTML Temelleri</span>
+                <img src="https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn" alt="HTML Ağacı" width="200" height="200">
+            </li>
+            <li>
+            <span>CSS Stilleri</span>
+                <img src="https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo" alt="CSS Seçicileri" width="200" height="200">
+            </li>
+            
+            <li>
+            <span>JavaScript Programlama</span>
+                <img src="https://miro.medium.com/v2/resize:fit:800/1*bthRXJ_FBspSEijOWIRM2A.png" alt="JavaScript" width="200" height="200">
+            </li>
+        </ul>
+    </section>
+
+    <section id="iletisim-form">
+        <h2>İletişim Bilgileri</h2>
+        <form action="#" method="post">
+            <label for="ad">Adınız:</label>
+            <input type="text" id="ad" name="ad" required><br>
+
+            <label for="soyad">Soyadınız:</label>
+            <input type="text" id="soyad" name="soyad" required><br>
+
+            <label for="email">E-posta Adresiniz:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" name="mesaj" rows="4" required></textarea><br>
+
+            <input type="submit" value="Gönder" id="send-email-button">
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("send-email-button").addEventListener("click", function () {
+            var ad = document.getElementById("ad").value;
+            var soyad = document.getElementById("soyad").value;
+            var email = document.getElementById("email").value;
+            var mesaj = document.getElementById("mesaj").value;
+    
+            var mailtoLink = "mailto:yildizah@mef.edu.tr" +
+                "?subject=İletişim Formu Mesajı" +
+                "&body=Adı: " + ad + "%0D%0A" +
+                "Soyadı: " + soyad + "%0D%0A" +
+                "E-posta: " + email + "%0D%0A" +
+                "Mesaj:%0D%0A" + mesaj;
+    
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Web Programlama Kursu</p>
+    </footer>
+</body>
+</html>
