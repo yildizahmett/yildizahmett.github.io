@@ -5,14 +5,15 @@
     <title>Web Programlama Kursu</title>
     <style>
         body {
-            background-color: #c6a6d1; /* Açık mor arka plan rengi */
+            background-color: #1b1b1b; /* Siyah arka plan rengi */
             text-align: center;
             margin: 0;
             padding: 0;
+            color: #fff; /* Beyaz metin rengi */
         }
 
         header {
-            background-color: #6923a1; /* Koyu mor başlık arka plan rengi */
+            background-color: #444; /* Gri başlık arka plan rengi */
             color: #fff;
             padding: 20px;
         }
@@ -26,7 +27,6 @@
             display: inline;
             margin: 10px;
         }
-
 
         section {
             text-align: left;
@@ -47,7 +47,7 @@
         }
 
         footer {
-            background-color: #6923a1; /* Koyu mor footer arka plan rengi */
+            background-color: #444; /* Gri footer arka plan rengi */
             color: #fff;
             padding: 10px;
         }
@@ -62,8 +62,8 @@
             display: inline-block;
             text-align: left;
             padding: 30px; /* Azaltıldı */
-            background-color: #f7f7f7; /* Renk değiştirildi */
-            border: 1px solid #ccc; /* Kenarlık eklendi */
+            background-color: #333; /* Koyu gri arka plan rengi */
+            border: 1px solid #555; /* Kenarlık eklendi */
             border-radius: 10px;
             width: 300px; /* Form genişliği ayarlandı */
             margin: 0 auto; /* Orta hizalandı */
@@ -72,6 +72,7 @@
         #iletisim-form label {
             display: block;
             margin: 10px;
+            color: #fff; /* Beyaz metin rengi */
         }
 
         #iletisim-form input,
@@ -79,24 +80,44 @@
             width: 90%;
             padding: 10px;
             margin: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #555; /* Kenarlık rengi güncellendi */
             border-radius: 5px;
         }
 
         #iletisim-form input[type="submit"] {
-            background-color: #6923a1;
+            background-color: #444; /* Gri buton arka plan rengi */
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .dark-mode {
+            background-color: #111; /* Koyu siyah arka plan rengi */
+            color: #fff;
+        }
+
+        .light-mode {
+            background-color: #fff; /* Beyaz arka plan rengi */
+            color: #000; /* Siyah metin rengi */
+        }
+
+        .mode-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
+    <button id="mode-toggle" class="mode-toggle-button">Dark Mode</button>
     <header>
         <h1>Web Programlama Kursu</h1>
-        <p>Honda hayat onda!</p>
+        <p>Web programlamayı öğrenmek için mükemmel bir başlangıç!</p>
     </header>
 
     <nav>
@@ -116,16 +137,15 @@
         <h2>Dersler</h2>
         <ul>
             <li>
-            <span>HTML Temelleri</span>
+                <span>HTML Temelleri</span>
                 <img src="https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn" alt="HTML Ağacı" width="200" height="200">
             </li>
             <li>
-            <span>CSS Stilleri</span>
+                <span>CSS Stilleri</span>
                 <img src="https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo" alt="CSS Seçicileri" width="200" height="200">
             </li>
-            
             <li>
-            <span>JavaScript Programlama</span>
+                <span>JavaScript Programlama</span>
                 <img src="https://miro.medium.com/v2/resize:fit:800/1*bthRXJ_FBspSEijOWIRM2A.png" alt="JavaScript" width="200" height="200">
             </li>
         </ul>
@@ -156,15 +176,32 @@
             var soyad = document.getElementById("soyad").value;
             var email = document.getElementById("email").value;
             var mesaj = document.getElementById("mesaj").value;
-    
+
             var mailtoLink = "mailto:yildizah@mef.edu.tr" +
                 "?subject=İletişim Formu Mesajı" +
                 "&body=Adı: " + ad + "%0D%0A" +
                 "Soyadı: " + soyad + "%0D%0A" +
                 "E-posta: " + email + "%0D%0A" +
                 "Mesaj:%0D%0A" + mesaj;
-    
+
             window.location.href = mailtoLink;
+        });
+    </script>
+
+    <script>
+        const modeToggle = document.getElementById("mode-toggle");
+        const body = document.body;
+
+        modeToggle.addEventListener("click", () => {
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode"); // Light mode sınıfını ekliyoruz
+                modeToggle.textContent = "Dark Mode";
+            } else {
+                body.classList.remove("light-mode"); // Light mode sınıfını kaldırıyoruz
+                body.classList.add("dark-mode");
+                modeToggle.textContent = "Light Mode";
+            }
         });
     </script>
 
