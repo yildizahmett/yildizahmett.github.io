@@ -53,7 +53,7 @@ header nav a:hover {
 
 .picture img {
 	border: 2px solid #393e46;
-	border-radius: 0.4rem;
+	border-radius: 30rem;
 	box-shadow: 0 0 0.3rem #c5cbd5;
 }
 
@@ -115,6 +115,23 @@ header nav a:hover {
 	font-weight: bold;
 	text-shadow: 0 1px 0.15rem #c5cbd5;
 	margin-bottom: 0.25rem;
+}
+
+.leftp {
+	animation: spin 8s ease-in-out infinite;
+}
+
+.rightp {
+	animation: spin 8s ease-in-out infinite reverse;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 hr {
