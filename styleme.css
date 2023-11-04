@@ -31,6 +31,10 @@ header nav a:hover {
 	color: #e2e2e2;
 }
 
+header nav a.nav-active {
+	color: darkgray !important;
+}
+
 .flexgrow {
 	flex-grow: 1;
 }
@@ -42,13 +46,27 @@ header nav a:hover {
 	padding-right: 2rem;
 	padding-bottom: 0.5rem;
 	background-color: #f0f5f9;
+	min-height: 100vh;
 }
 
 .mygrid {
-	padding: 2rem 0rem;
 	display: flex;
 	justify-content: center;
-	gap: 1rem;
+	align-items: center;
+	height: 60vh;
+	gap: 2rem;
+}
+
+.welcome {
+	max-width: 30rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.picture {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .picture img {
@@ -161,19 +179,6 @@ li {
 
 li:nth-child(odd) {
 	color: #1581a0;
-}
-
-ol {
-	counter-reset: reverse-counter 4;
-	list-style: none;
-}
-
-ol > li {
-	counter-increment: reverse-counter -1;
-}
-
-ol > li::before {
-	content: counter(reverse-counter) '. ';
 }
 
 @media screen and (max-width: 1024px) {
