@@ -23,9 +23,37 @@
   </header>
 
   <section class="container">
-    a
+    
+    <h1>Project Portfolio</h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Project1')">Project 1</button>
+      <button class="tablinks" onclick="openTab(event, 'Project2')">Silver</button>
+      <button class="tablinks" onclick="openTab(event, 'Project3')">MEF MOOC</button>
+      <button class="tablinks" onclick="openTab(event, 'Project4')">UP School</button>
+    </div>
+
+    <div id="Project1" class="tabcontent">
+      <h3>Project 1</h3>
+      <p>Project 1 details go here.</p>
+    </div>
+
+    <div id="Project2" class="tabcontent">
+      <h3>Silver</h3>
+      <p>A jewelry-focused e-commerce platform designed for both dealers and workshops. Dealers have the flexibility to place orders for any quantity of jewelry they desire, while workshops can access these orders and craft the requested items. This website was developed using Flask and PostgreSQL.</p>
+    </div>
+
+    <div id="Project3" class="tabcontent">
+      <h3>MEF MOOC</h3>
+      <p>This website is specifically designed to address the challenge of students selecting online course bundles to fulfill their elective course requirements. Students have the capability to assemble bundles, which instructors can review and either endorse or decline. This project is developed for MF University as part of a class assignment, and it utilizes Flask and PostgreSQL for its implementation.</p>
+    </div>
+
+    <div id="Project4" class="tabcontent">
+      <h3>UP School</h3>
+      <p>A platform resembling LinkedIn, where students and alumni can input their details to showcase themselves to prospective employers in their job search. Companies have the ability to sort through student profiles to identify the talents they need. This website was constructed using Flask and PostgreSQL.</p>
+    </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
-
-
 </html>

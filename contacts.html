@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Contacts</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="styleme.css">
 </head>
 
@@ -23,8 +23,34 @@
   </header>
 
   <section class="container">
-    a
+    <h1>My Contacts</h1>
+
+    <div class="avatar">
+        <img src="https://avatars.githubusercontent.com/u/78380442?v=4" width="400px" height="400px">
+      </div>
+      <div class="name">Ahmet Yıldız</div>
+      <div class="details">
+        
+        <span>yildizah@mef.edu.tr</span>
+        <span>Phone: +90 555 555 55 55</span>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/yildizahmett" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/yildizahmet/" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/yildizhmt" target="_blank">Twitter</a>
+      </div>
+      <div class="commentarea">
+        <h2>Leave a Comment</h2>
+
+        <input type="text" placeholder="Name" id="name" >
+        <input type="text" placeholder="Surname" id="surname">
+        <input type="email" placeholder="Email" id="email">
+        <textarea placeholder="Enter your comment here..." id="comment"></textarea>
+        <button onclick="handleCommentSubmit()">Submit</button>
+      </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 
 
