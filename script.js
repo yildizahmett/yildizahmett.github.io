@@ -1,6 +1,6 @@
-const welcomeDiv = document.getElementById('welcome');
-
 function animateDiv() {
+	const welcomeDiv = document.getElementById('welcome');
+
 	welcomeDiv.style.opacity = 0;
 	welcomeDiv.animate(
 		[
@@ -102,7 +102,7 @@ function handleCommentSubmit() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	if (window.location.pathname === '/favorites.html') {
+	if (window.location.pathname === '/favorites.html' || (window.location.pathname.split('/')[window.location.pathname.split('/').length - 1] === "favorites.html")) {
 		showSlides();
 		showSlides2();
 		showSlides3();
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	try {
 		animateDiv();
 	} catch (error) {
-		console.log(error);
+		console.log('Error occured:', error);
 	}
 });
 
