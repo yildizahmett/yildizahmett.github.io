@@ -9,18 +9,26 @@
 </head>
 
 <body>
-
   <header>
       <nav>
+        <button class="open-button" onclick="openSidebar()">&#9776;</button>
         <a href="index.html">Ahmet Yıldız</a>
-        <span class="flexgrow"></span>
-        <a href="index.html">Main</a>
-        <a href="educations.html" class="nav-active">Educations</a>
-        <a href="projects.html">Projects</a>
-        <a href="favorites.html">Favorites</a>
-        <a href="contacts.html">Contact</a>
+        <div></div>
       </nav>
   </header>
+
+  <div class="sidebar">
+    <button class="close-button" onclick="closeSidebar()">&#215;</button>
+    <nav>
+    <ul>
+      <a href="index.html">Main</a>
+      <a href="educations.html" class="nav-active">Educations</a>
+      <a href="projects.html">Projects</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="contacts.html">Contact</a>
+    </ul>
+  </nav>
+  </div>
 
   <section class="container">
     
@@ -28,19 +36,25 @@
 
       <div class="cards">
         <div class="card education">
-          <h2><a href="https://anafartalario.meb.k12.tr/" target="_blank">Anafartalar Primary School</a></h2>
           <a href="https://anafartalario.meb.k12.tr/" target="_blank"><img src="https://anafartalario.meb.k12.tr/meb_iys_dosyalar/34/27/742668/resimler/2020_10/k_20123418_IMG_20201020_122118.jpg"></a>
-          <span>2006 - 2010</span>
+          <div>
+            <h2><a href="https://anafartalario.meb.k12.tr/" target="_blank">Anafartalar Primary School</a></h2>
+            <span>2006 - 2010</span>
+          </div>
         </div>
         <div class="card education">
-          <h2><a href="https://gungorenanadolulisesi.meb.k12.tr/" target="_blank">Gungoren Anatolian Highschool</a></h2>
           <a href="https://gungorenanadolulisesi.meb.k12.tr/" target="_blank"><img src="https://hmntaml0.rocketcdn.com/schools-images/972397_1/beb752989948f101c81a8e0bb293ad5d.jpg"></a>
-          <span>2014 - 2018</span>
+          <div>
+            <h2><a href="https://gungorenanadolulisesi.meb.k12.tr/" target="_blank">Gungoren Anatolian Highschool</a></h2>
+            <span>2014 - 2018</span>
+          </div>
         </div>
-        <div class="card education">
-          <h2><a href="https://www.mef.edu.tr/tr" target="_blank">MEF University</a></h2>
+        <div class="card education card3">
           <a href="https://www.mef.edu.tr/tr" target="_blank"><img src="https://academiamaslak.com/mef-universitesine-yakin-ogrenci-yurdu.jpg"></a>
-          <span>2019 - 2024</span>
+          <div>
+            <h2><a href="https://www.mef.edu.tr/tr" target="_blank">MEF University</a></h2>
+            <span>2019 - 2024</span>
+          </div>
         </div>
       </div>
     

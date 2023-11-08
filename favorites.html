@@ -9,18 +9,26 @@
 </head>
 
 <body>
-
   <header>
       <nav>
+        <button class="open-button" onclick="openSidebar()">&#9776;</button>
         <a href="index.html">Ahmet Yıldız</a>
-        <span class="flexgrow"></span>
-        <a href="index.html">Main</a>
-        <a href="educations.html">Educations</a>
-        <a href="projects.html">Projects</a>
-        <a href="favorites.html" class="nav-active">Favorites</a>
-        <a href="contacts.html">Contact</a>
+        <div></div>
       </nav>
   </header>
+
+  <div class="sidebar">
+    <button class="close-button" onclick="closeSidebar()">&#215;</button>
+    <nav>
+    <ul>
+      <a href="index.html">Main</a>
+      <a href="educations.html">Educations</a>
+      <a href="projects.html">Projects</a>
+      <a href="favorites.html" class="nav-active">Favorites</a>
+      <a href="contacts.html">Contact</a>
+    </ul>
+  </nav>
+  </div>
 
   <section class="container">
     

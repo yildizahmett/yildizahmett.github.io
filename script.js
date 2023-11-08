@@ -107,5 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		showSlides2();
 		showSlides3();
 	}
-	animateDiv();
+
+	document.querySelector('.sidebar').style.position = 'fixed';
+
+	try {
+		animateDiv();
+	} catch (error) {
+		console.log(error);
+	}
 });
+
+function openSidebar() {
+	if (window.innerWidth < 768) {
+		document.querySelector('.sidebar').style.width = '100%';
+		return;
+	}
+
+	document.querySelector('.sidebar').style.width = '250px';
+}
+
+function closeSidebar() {
+	document.querySelector('.sidebar').style.width = '0';
+}

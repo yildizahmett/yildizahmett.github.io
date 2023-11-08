@@ -9,21 +9,30 @@
 </head>
 
 <body>
-
   <header>
       <nav>
+        <button class="open-button" onclick="openSidebar()">&#9776;</button>
         <a href="index.html">Ahmet Yıldız</a>
-        <span class="flexgrow"></span>
-        <a href="index.html">Main</a>
-        <a href="educations.html">Educations</a>
-        <a href="projects.html">Projects</a>
-        <a href="favorites.html">Favorites</a>
-        <a href="contacts.html" class="nav-active">Contact</a>
+        <div></div>
       </nav>
   </header>
 
-  <section class="container">
-    <h1>My Contacts</h1>
+  <div class="sidebar">
+    <button class="close-button" onclick="closeSidebar()">&#215;</button>
+    <nav>
+    <ul>
+      <a href="index.html">Main</a>
+      <a href="educations.html">Educations</a>
+      <a href="projects.html">Projects</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="contacts.html" class="nav-active">Contact</a>
+    </ul>
+  </nav>
+  </div>
+
+  <section class="container contactgrid">
+    <div class="infoarea">
+      <h1>My Contacts</h1>
 
     <div class="avatar">
         <img src="https://avatars.githubusercontent.com/u/78380442?v=4" width="400px" height="400px">
@@ -32,13 +41,14 @@
       <div class="details">
         
         <span>yildizah@mef.edu.tr</span>
-        <span>Phone: +90 555 555 55 55</span>
+        <span>+90 555 555 55 55</span>
       </div>
       <div class="socials">
         <a href="https://github.com/yildizahmett" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/yildizahmet/" target="_blank">LinkedIn</a>
         <a href="https://twitter.com/yildizhmt" target="_blank">Twitter</a>
       </div>
+    </div>
       <div class="commentarea">
         <h2>Leave a Comment</h2>
 

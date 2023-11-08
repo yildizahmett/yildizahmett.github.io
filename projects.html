@@ -9,33 +9,43 @@
 </head>
 
 <body>
-
   <header>
       <nav>
+        <button class="open-button" onclick="openSidebar()">&#9776;</button>
         <a href="index.html">Ahmet Yıldız</a>
-        <span class="flexgrow"></span>
-        <a href="index.html">Main</a>
-        <a href="educations.html">Educations</a>
-        <a href="projects.html" class="nav-active">Projects</a>
-        <a href="favorites.html">Favorites</a>
-        <a href="contacts.html">Contact</a>
+        <div></div>
       </nav>
   </header>
+
+  <div class="sidebar">
+    <button class="close-button" onclick="closeSidebar()">&#215;</button>
+    <nav>
+    <ul>
+      <a href="index.html">Main</a>
+      <a href="educations.html">Educations</a>
+      <a href="projects.html" class="nav-active">Projects</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="contacts.html">Contact</a>
+    </ul>
+  </nav>
+  </div>
 
   <section class="container">
     
     <h1>Project Portfolio</h1>
 
     <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Project1')">Project 1</button>
+      <button class="tablinks" onclick="openTab(event, 'Project1')">Spine Detection</button>
       <button class="tablinks" onclick="openTab(event, 'Project2')">Silver</button>
       <button class="tablinks" onclick="openTab(event, 'Project3')">MEF MOOC</button>
       <button class="tablinks" onclick="openTab(event, 'Project4')">UP School</button>
+      <button class="tablinks" onclick="openTab(event, 'Project5')">Fake News Detection</button>
+      <button class="tablinks" onclick="openTab(event, 'Project6')">Sensitive Content</button>
     </div>
 
     <div id="Project1" class="tabcontent">
-      <h3>Project 1</h3>
-      <p>Project 1 details go here.</p>
+      <h3>Spine Posture Detection Using Machine Learning</h3>
+      <p>My friend and I embarked on an innovative project where we worked together to design a system that employs advanced machine learning algorithms to identify poor spine posture. Our main goal was to develop a reliable and precise system capable of recognizing misalignments in the spine, with the aim of enhancing posture awareness and potentially preventing associated health issues. The resulting system has great potential for raising awareness about spinal health, particularly in situations where individuals may not have immediate access to healthcare professionals. By accurately identifying instances of bad spine posture, the system can promptly provide feedback to users, motivating them to improve their posture and adopt healthier habits. This collaborative project successfully created a system that utilizes advanced machine learning methods to detect improper spine posture. The system's ability to accurately classify spine postures represents a significant advancement in the promotion of better posture and awareness of spinal health. It serves as a testament to the positive impact of technology on public health and underscores the importance of interdisciplinary cooperation in addressing real-world health-related challenges.</p>
     </div>
 
     <div id="Project2" class="tabcontent">
@@ -51,6 +61,16 @@
     <div id="Project4" class="tabcontent">
       <h3>UP School</h3>
       <p>A platform resembling LinkedIn, where students and alumni can input their details to showcase themselves to prospective employers in their job search. Companies have the ability to sort through student profiles to identify the talents they need. This website was constructed using Flask and PostgreSQL.</p>
+    </div>
+
+    <div id="Project5" class="tabcontent">
+      <h3>Multimodal Fake News Detection</h3>
+      <p>In this project, I created a fake news detection system that utilizes both textual and visual elements from news articles, embracing a multimodal approach. The project highlighted the critical role of multimodal data analysis and the importance of feature engineering in the realm of machine learning. It underscored the significance of feature engineering in the context of machine learning, particularly when dealing with multimodal data analysis. The project also exemplified the importance of multimodal data analysis, harnessing both textual and visual attributes to enhance overall performance. Valuable insights were gained from the project regarding the trade-offs between various feature engineering techniques and the significance of multimodal data analysis, all of which contribute to the advancement of machine learning and data science.</p>
+    </div>
+
+    <div id="Project6" class="tabcontent">
+      <h3>Private Sensitive Content Detection</h3>
+      <p>In this endeavor, I developed a system for detecting sensitive content within news articles, using a combination of text and visual cues. The project underscored the crucial role of feature engineering in machine learning and highlighted the value of analyzing data from multiple sources. It emphasized the necessity of effective feature engineering in machine learning, especially when dealing with data that combines both textual and visual elements. The project also underscored the importance of multimodal data analysis, which harnesses both text and visual features to achieve superior performance. Ultimately, the project yielded valuable insights into the trade-offs among various feature engineering methods and the significance of multimodal data analysis, contributing to the advancement of machine learning and data science.</p>
     </div>
   </section>
 
